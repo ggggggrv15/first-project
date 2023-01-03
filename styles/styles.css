@@ -4,7 +4,7 @@ body {
     background-color: #eee;
     text-align: center;
   }
-
+/*sample comment!!!*/
   img {
     max-width: 30%;
     border: 1px solid #ccc;
@@ -14,7 +14,7 @@ body {
     font-weight: bold;
   }
 
-  @media (min-width: 30em) {
+  @media (min-width: 20em) {
     body {
       background-color: blue;
     }
