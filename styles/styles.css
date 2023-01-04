@@ -14,9 +14,9 @@ body {
     font-weight: bold;
   }
 
-  @media (min-width: 55em) {
+  @media (min-width: 200em) { /* doesn't do anything rn*/
     body {
-      background-color: blue;
+      background-color: rgb(225, 122, 197);
     }
   }
   p {
