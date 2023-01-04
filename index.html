@@ -6,6 +6,30 @@
     <meta name="viewport" content="width=device-width" />
     <title>My test page!!!</title>
     <style>
+
+      /* Style for the rainbow slider */
+      .slider {
+        width: 100%;
+        height: 20px;
+        border: 1px solid #999;
+        border-radius: 10px;
+        background-color: #eee;
+        overflow: hidden;
+      }
+      .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+        border-radius: 50%;
+      }
+      .slider::-moz-range-thumb {
+        width: 20px;
+        height: 20px;
+        background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+        border-radius: 50%;
+      }
       
     </style>
   </head>
@@ -15,6 +39,23 @@
     <p>I have at least 5 fingers (this is an honorable amount of fingers):</p>
     <ol><li>thumb</li><li>pointer</li><li>middle</li><li>ring</li><li>pinky</li></ol>
     <a title = "my insta" target= "_blank" href="https://www.instagram.com/aidan.mokalla">my instagram page (very honorable)</a>
+    <!-- Rainbow slider element -->
+    <input type="range" min="0" max="100" value="0" class="slider" id="rainbowSlider">
+
+    <!-- JavaScript to open a new tab when the slider reaches the right side -->
+    <script>
+      // Get the rainbow slider element
+      const rainbowSlider = document.getElementById('rainbowSlider');
+
+      // Add an event listener for the input event on the rainbow slider
+      rainbowSlider.addEventListener('input', () => {
+        // If the value of the slider is 100 (reaches the right side)
+        if (rainbowSlider.value === '100') {
+          // Open a new tab with a link to Google
+          window.open('https://www.google.com');
+        }
+      });
+      </script>
     <p>dragonflys are also very honorable. here is how long some common dragonflies usually live:</p>
     <table>
       <tr>
